@@ -33,13 +33,13 @@
             this.components = new System.ComponentModel.Container();
             this.tbxCountdownTime = new System.Windows.Forms.MaskedTextBox();
             this.tmrCountdown = new System.Windows.Forms.Timer(this.components);
-            this.btnClose = new FlatButton();
-            this.lblSeconds = new Label();
-            this.lblMinutes = new Label();
-            this.lblHours = new Label();
-            this.lblCountdownTime = new Label();
-            this.btnControl = new FlatButton();
-            this.btnStop = new FlatButton();
+            this.btnClose = new Focusr.Controls.FlatButton();
+            this.lblSeconds = new Focusr.Controls.Label();
+            this.lblMinutes = new Focusr.Controls.Label();
+            this.lblHours = new Focusr.Controls.Label();
+            this.lblCountdownTime = new Focusr.Controls.Label();
+            this.btnControl = new Focusr.Controls.FlatButton();
+            this.btnStop = new Focusr.Controls.FlatButton();
             this.SuspendLayout();
             // 
             // tbxCountdownTime
@@ -50,7 +50,7 @@
             this.tbxCountdownTime.Font = new System.Drawing.Font("Microsoft YaHei UI", 28F);
             this.tbxCountdownTime.ForeColor = System.Drawing.Color.White;
             this.tbxCountdownTime.HidePromptOnLeave = true;
-            this.tbxCountdownTime.Location = new System.Drawing.Point(2, 18);
+            this.tbxCountdownTime.Location = new System.Drawing.Point(2, 16);
             this.tbxCountdownTime.Margin = new System.Windows.Forms.Padding(0);
             this.tbxCountdownTime.Mask = "00:00:00";
             this.tbxCountdownTime.Name = "tbxCountdownTime";
@@ -91,7 +91,7 @@
             this.lblSeconds.AutoSize = true;
             this.lblSeconds.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeconds.ForeColor = System.Drawing.Color.White;
-            this.lblSeconds.Location = new System.Drawing.Point(128, 2);
+            this.lblSeconds.Location = new System.Drawing.Point(128, 3);
             this.lblSeconds.Name = "lblSeconds";
             this.lblSeconds.Size = new System.Drawing.Size(27, 16);
             this.lblSeconds.TabIndex = 5;
@@ -103,7 +103,7 @@
             this.lblMinutes.AutoSize = true;
             this.lblMinutes.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMinutes.ForeColor = System.Drawing.Color.White;
-            this.lblMinutes.Location = new System.Drawing.Point(75, 2);
+            this.lblMinutes.Location = new System.Drawing.Point(76, 3);
             this.lblMinutes.Name = "lblMinutes";
             this.lblMinutes.Size = new System.Drawing.Size(31, 16);
             this.lblMinutes.TabIndex = 4;
@@ -115,7 +115,7 @@
             this.lblHours.AutoSize = true;
             this.lblHours.Font = new System.Drawing.Font("Microsoft YaHei UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHours.ForeColor = System.Drawing.Color.White;
-            this.lblHours.Location = new System.Drawing.Point(13, 2);
+            this.lblHours.Location = new System.Drawing.Point(13, 3);
             this.lblHours.Name = "lblHours";
             this.lblHours.Size = new System.Drawing.Size(47, 16);
             this.lblHours.TabIndex = 3;
@@ -127,7 +127,7 @@
             this.lblCountdownTime.AutoSize = true;
             this.lblCountdownTime.BackColor = System.Drawing.Color.Transparent;
             this.lblCountdownTime.Font = new System.Drawing.Font("Microsoft YaHei UI", 27.75F);
-            this.lblCountdownTime.Location = new System.Drawing.Point(5, 18);
+            this.lblCountdownTime.Location = new System.Drawing.Point(5, 16);
             this.lblCountdownTime.Margin = new System.Windows.Forms.Padding(0);
             this.lblCountdownTime.Name = "lblCountdownTime";
             this.lblCountdownTime.Size = new System.Drawing.Size(170, 48);
@@ -193,11 +193,11 @@
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnControl);
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.lblCountdownTime);
+            this.Controls.Add(this.tbxCountdownTime);
             this.Controls.Add(this.lblSeconds);
             this.Controls.Add(this.lblMinutes);
             this.Controls.Add(this.lblHours);
-            this.Controls.Add(this.lblCountdownTime);
-            this.Controls.Add(this.tbxCountdownTime);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

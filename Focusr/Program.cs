@@ -11,23 +11,28 @@
         [STAThread]
         public static void Main()
         {
-            var container = CreateContainer();
+            using (var container = CreateContainer())
+            {
+                container.Configure();
 
-            container.Register(Classes.FromThisAssembly().BasedOn<Form>());
-            container.Register(Classes.FromThisAssembly()
-                .Where(type => type.IsPublic)
-                .WithService.DefaultInterfaces());
-            container.Register(Component.For<Timer>());
-
-
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(container.Resolve<MainForm>());
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(container.Resolve<MainForm>());
+            }
         }
 
         private static IWindsorContainer CreateContainer()
         {
             return new WindsorContainer();
+        }
+
+        private static void Configure(this IWindsorContainer container)
+        {
+            container.Register(Classes.FromThisAssembly().BasedOn<Form>());
+            container.Register(Classes.FromThisAssembly()
+                .Where(type => type.IsPublic)
+                .WithService.DefaultInterfaces());
+            container.Register(Component.For<Timer>());
         }
     }
 }
