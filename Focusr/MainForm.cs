@@ -2,12 +2,13 @@
 {
     using System;
     using System.Drawing;
+    using System.Drawing.Drawing2D;
     using System.Runtime.InteropServices;
     using System.Threading.Tasks;
     using System.Windows.Forms;
     using Focusr.Extensions;
 
-    public partial class MainForm : FormBase
+    public partial class MainForm : MovableForm
     {
         private const uint SWP_NOSIZE = 0x0001;
         private const uint SWP_NOMOVE = 0x0002;
@@ -36,22 +37,24 @@
             SetWindowPos(this.Handle, HWND_TOPMOST, 0, 0, 0, 0, TOPMOST_FLAGS);
 
             //this.btnClose.BackColor = Color.FromArgb(25, 0, 0, 0);
-            this.btnClose.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 0, 0, 0);
-            this.btnClose.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0, 0);
+            //this.btnClose.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 0, 0, 0);
+            //this.btnClose.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0, 0);
 
             this.btnControl.Tag = "Play";
 
             //this.btnControl.BackColor = Color.FromArgb(25, 0, 0, 0);
-            this.btnControl.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 0, 0, 0);
-            this.btnControl.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0, 0);
+            //this.btnControl.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 0, 0, 0);
+            //this.btnControl.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0, 0);
 
             //this.btnStop.BackColor = Color.FromArgb(25, 0, 0, 0);
-            this.btnStop.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 0, 0, 0);
-            this.btnStop.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0, 0);
+            //this.btnStop.FlatAppearance.MouseDownBackColor = Color.FromArgb(75, 0, 0, 0);
+            //this.btnStop.FlatAppearance.MouseOverBackColor = Color.FromArgb(50, 0, 0, 0);
 
             var desktopWorkingArea = System.Windows.Forms.Screen.PrimaryScreen.WorkingArea;
             this.Left = desktopWorkingArea.Right - this.Width;
             this.Top = desktopWorkingArea.Bottom - this.Height;
+
+            //this.Opacity = .80;
         }
 
         // Removes flickering while changeing form color
@@ -78,6 +81,7 @@
         // Removes flickering while changeing form color
         protected override void OnPaint(PaintEventArgs e)
         {
+            
         }
 
         protected override void WndProc(ref Message m)

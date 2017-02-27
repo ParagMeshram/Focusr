@@ -66,11 +66,8 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.BackColor = System.Drawing.Color.Transparent;
             this.btnClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Wingdings 2", 10F);
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -141,11 +138,8 @@
             // btnControl
             // 
             this.btnControl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnControl.BackColor = System.Drawing.Color.Transparent;
             this.btnControl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnControl.FlatAppearance.BorderSize = 0;
-            this.btnControl.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnControl.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnControl.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnControl.Font = new System.Drawing.Font("Wingdings 3", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnControl.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -164,11 +158,8 @@
             // btnStop
             // 
             this.btnStop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnStop.BackColor = System.Drawing.Color.Transparent;
             this.btnStop.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnStop.FlatAppearance.BorderSize = 0;
-            this.btnStop.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.btnStop.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop.Font = new System.Drawing.Font("Wingdings 3", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
             this.btnStop.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;

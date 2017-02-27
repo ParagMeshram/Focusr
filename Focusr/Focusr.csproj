@@ -65,7 +65,7 @@
     <Compile Include="CountdownFormatter.cs" />
     <Compile Include="CountdownTimer.cs" />
     <Compile Include="Extensions\FormExtensions.cs" />
-    <Compile Include="FormBase.cs">
+    <Compile Include="MovableForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.cs">
