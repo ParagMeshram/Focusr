@@ -91,7 +91,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Resource Include="Fonts\FontAwesome.otf" />
     <Resource Include="Fonts\line-awesome.ttf" />
     <None Include="packages.config">
       <SubType>Designer</SubType>
