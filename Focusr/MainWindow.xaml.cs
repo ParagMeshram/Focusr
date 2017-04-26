@@ -28,7 +28,7 @@
 
         public CountdownTimer()
         {
-            this.timer = new Timer {Interval = 1000};
+            this.timer = new Timer { Interval = 1000 };
             this.timer.Elapsed += this.OnTick;
         }
 
@@ -68,12 +68,12 @@
 
         protected virtual void OnTick(object sender, ElapsedEventArgs args)
         {
-            this.CountdownTick?.Invoke(this, new CountdownEventArgs {TimeSpanLeft = this.TimeSpanLeft});
+            this.CountdownTick?.Invoke(this, new CountdownEventArgs { TimeSpanLeft = this.TimeSpanLeft });
 
             if (this.TimeSpanLeft == TimeSpan.Zero)
             {
                 this.timer.Enabled = false;
-                this.CountdownComplete?.Invoke(this, new CountdownEventArgs {TimeSpanLeft = TimeSpan.Zero});
+                this.CountdownComplete?.Invoke(this, new CountdownEventArgs { TimeSpanLeft = TimeSpan.Zero });
             }
             else
                 this.TimeSpanLeft = this.TimeSpanLeft.Subtract(TimeSpan.FromSeconds(1));
@@ -96,6 +96,8 @@
 
             this.timer.CountdownTick += this.CountdownCountdownTick;
             this.timer.CountdownComplete += this.TimerOnCountdownComplete;
+
+            this.EditButton.Tag = true;
         }
 
         private void CountdownCountdownTick(object sender, CountdownEventArgs e)
@@ -139,7 +141,7 @@
 
         private void PlayPauseButton_Click(object sender, RoutedEventArgs e)
         {
-            this.timer.Start(TimeSpan.FromMinutes(10));
+            this.timer.Start(TimeSpan.FromSeconds(10));
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
@@ -192,10 +194,12 @@
 
         private void EditButton_Click(object sender, RoutedEventArgs e)
         {
-            var editButton = this.EditButton;
-            if (editButton.Content != null && (editButton != null && editButton.Content == "\u003C"))
+            var editMode = !(bool)this.EditButton.Tag;
+
+            if (editMode)
             {
-                this.EditButton.Content = "\u0021";
+                this.EditButton.Content = (String)this.Resources["EditIcon"];
+                this.EditButton.Tag = true;
                 this.Hours.BorderThickness =
                     this.Minutes.BorderThickness = this.Seconds.BorderThickness = new Thickness(0);
                 this.Hours.IsReadOnly = true;
@@ -207,7 +211,8 @@
             }
             else
             {
-                this.EditButton.Content = "\u003C";
+                this.EditButton.Content = (String)this.Resources["SaveIcon"];
+                this.EditButton.Tag = false;
                 this.Hours.BorderThickness =
                     this.Minutes.BorderThickness = this.Seconds.BorderThickness = new Thickness(0, 0, 0, 1);
                 this.Hours.IsReadOnly = false;

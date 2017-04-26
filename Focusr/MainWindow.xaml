@@ -29,10 +29,10 @@
         <Label Content="SEC" Foreground="White" Canvas.Left="133" Canvas.Top="1" FontFamily="Microsoft YaHei UI"
                FontSize="8" />
         <StackPanel Canvas.Right="0" Canvas.Top="0" Orientation="Vertical">
-        <Button Name="CloseButton" Style="{StaticResource FlatButtonStyle}" FontFamily="Webdings" Height="20" Width="20" Canvas.Right="0" Canvas.Top="0" Content="&#x72;" Click="CloseButton_Click"/>
-        <Button Name="EditButton"  Style="{StaticResource FlatButtonStyle}" FontFamily="Wingdings" Height="20" Width="20" Canvas.Right="0" Canvas.Top="40" Content="&#x21;" Click="EditButton_Click" Canvas.Left="170" />
-        <Button Name="PlayPauseButton" Style="{StaticResource FlatButtonStyle}" FontFamily="Webdings" Height="20" Width="20" Canvas.Right="0" Canvas.Top="20" Content="&#x34;" Click="PlayPauseButton_Click" />
-        <Button Name="ResetButton"  Style="{StaticResource FlatButtonStyle}" FontFamily="Wingdings 3" Height="20" Width="20" Canvas.Right="0" Canvas.Top="60" Content="&#x51;" Click="ResetButton_Click" Canvas.Left="170" />
+            <Button Name="CloseButton" Style="{StaticResource FlatButtonStyle}" FontFamily="{StaticResource FontAwesome}" Height="20" Width="20" Canvas.Right="0" Canvas.Top="0" Content="{StaticResource CloseIcon}" Click="CloseButton_Click"/>
+            <Button Name="EditButton"  Style="{StaticResource FlatButtonStyle}" FontFamily="{StaticResource FontAwesome}" Height="20" Width="20" Canvas.Right="0" Canvas.Top="40" Content="{StaticResource EditIcon}" Click="EditButton_Click" Canvas.Left="170" />
+            <Button Name="PlayPauseButton" Style="{StaticResource FlatButtonStyle}" FontFamily="{StaticResource FontAwesome}" Height="20" Width="20" Canvas.Right="0" Canvas.Top="20" Content="{StaticResource PlayIcon}" Click="PlayPauseButton_Click" />
+            <Button Name="ResetButton"  Style="{StaticResource FlatButtonStyle}" FontFamily="{StaticResource FontAwesome}" Height="20" Width="20" Canvas.Right="0" Canvas.Top="60" Content="{StaticResource ResetIcon}" Click="ResetButton_Click" Canvas.Left="170" />
         </StackPanel>
         <StackPanel Canvas.Left="5" Canvas.Top="18" Orientation="Vertical">
             <StackPanel Orientation="Horizontal">

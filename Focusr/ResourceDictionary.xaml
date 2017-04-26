@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:ChromaticBox.CountDownr.UI">
+                    xmlns:local="clr-namespace:ChromaticBox.CountDownr.UI"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
     <Style x:Key="FlatButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="Background" Value="Transparent"/>
@@ -46,4 +47,13 @@
             </Setter.Value>
         </Setter>
     </Style>
+    <!--<FontFamily x:Key="FontAwesome">/Fonts/FontAwesome.otf#FontAwesome</FontFamily>-->
+    <FontFamily x:Key="FontAwesome">/Fonts/line-awesome.ttf#LineAwesome</FontFamily>
+    <!-- String resource that can be localized -->
+    <system:String x:Key="CloseIcon">&#xf191;</system:String>
+    <system:String x:Key="EditIcon">&#xf2b0;</system:String>
+    <system:String x:Key="SaveIcon">&#xf2e9;</system:String>
+    <system:String x:Key="PlayIcon">&#xf2be;</system:String>
+    <system:String x:Key="PauseIcon">&#xf2ad;</system:String>
+    <system:String x:Key="ResetIcon">&#xf2d5;</system:String>
 </ResourceDictionary>
